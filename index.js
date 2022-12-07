@@ -111,9 +111,10 @@ app.delete('/api/persons/:id', (request, response, next) => {
 
 app.get('/info', (request, response) => {
   const date = new Date();
-  Person.find({}).then(result => {
-    response.send(`<p>Phonebook has info for ${result.length} people</p><p>${date.toUTCString()}</p>`)
-  })
+  response.send('ping')
+  // Person.find({}).then(result => {
+  //   response.send(`<p>Phonebook has info for ${result.length} people</p><p>${date.toUTCString()}</p>`)
+  //})
   
 })
 
